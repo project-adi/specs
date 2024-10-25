@@ -1,4 +1,6 @@
 # The ADI <name> metalanguage
+## Basic info
+ID: <id(32-bit number)>
 
 ## Structs
 structures of the metalanguage id needed

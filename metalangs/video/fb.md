@@ -1,4 +1,8 @@
 # ADI framebuffer metalanguage
+## Basic info
+ID: 0x00040001
+
+
 ## Structs
 * fbinfo_t
 ```c

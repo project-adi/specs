@@ -39,7 +39,7 @@ These metalanguages let the driver provide their functionality:
     - <a href="video/fb.md">Framebuffer</a>
     <!-- - <a href="video/opengl.md">OpenGL</a>
     - <a href="video/vulkan.md">Vulkan</a> -->
-* Misc(`0x00FFnxxxx`)
+* Misc(`0x00FFxxxx`)
     - <a href="misc/storage.md">Storage</a>
     - <a href="misc/timekeeper.md">Timekeeper</a>
 

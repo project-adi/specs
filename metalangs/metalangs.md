@@ -1,4 +1,4 @@
-# Metalanguages IDs
+# Metalanguage IDs
 a metalanguage ID is a 32 bit number unique to each metalanguage. While it can be anything, it should be interpreted as 16 bits of grup ID and 16 bits of metalanguage ID.
 
 # Metalnaguage orientation

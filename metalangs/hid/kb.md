@@ -4,12 +4,15 @@ ID: 0x00020000
 
 ## Driver side
 ### Events
-`poll`(`char*` buffer,`uint32` amt) -> `bool` success
+* `event_poll`(`char*` buffer,`uint32` amt) -> `bool` success</br>
+tied to `poll` 
 ### Functions
-`send_event_key`(`char` scancode) -> `bool` success
-
+* `send_event_key`(`char` scancode) -> `bool` success</br>
+tied to `event_key`
 ## Client side
 ### Events
-`event_key`(`char` scancode)
+* `event_key`(`char` scancode)</br>
+tied to `send_key`
 ### Functions
-`get_key`(`char*` buffer,`uint32` amt) -> `bool` success
+* `poll`(`char*` buffer,`uint32` amt) -> `bool` success</br>
+tied to `event_poll`

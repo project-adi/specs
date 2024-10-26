@@ -17,10 +17,10 @@ typedef struct {
 
 ## Driver side
 ### Events
-* `fbinfo_t framebuffer_request(uint FBID)`</br>
+* `fbinfo_t framebuffer_request(uint FBID)` -> `fbinfo_t` info</br>
 tied to `get_fbinfo`
 
 ## Client side
 ### Functions
-* `fbinfo_t get_fbinfo(uint FBID)` </br>
+* `fbinfo_t get_fbinfo(uint FBID)` -> `fbinfo_t` info </br>
 tied to `framebuffer_request`

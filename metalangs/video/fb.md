@@ -1,7 +1,7 @@
 # ADI framebuffer metalanguage
 ## Basic info
-ID: 0x00040001
-
+ID: 0x40030001
+stringified name: video-fb
 
 ## Structs
 * fbinfo_t
@@ -17,9 +17,10 @@ typedef struct {
 
 ## Driver side
 ### Events
-* `fbinfo_t framebuffer_request(uint FBID)` 
+* `fbinfo_t framebuffer_request(uint FBID)`</br>
+tied to `get_fbinfo`
 
 ## Client side
 ### Functions
 * `fbinfo_t get_fbinfo(uint FBID)` </br>
-triggers the event on the driver side
+tied to `framebuffer_request`

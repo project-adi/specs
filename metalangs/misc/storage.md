@@ -16,7 +16,7 @@ typedef struct {
 
 ## Driver side
 ### Events
-* `event_identify`() -> `sdev_ident_t*` ident</br>
+* `event_identify`() -> `sdev_ident_t` ident</br>
 tied to `identify`
 * `event_transact`(`bool` write,`uint32_t` offset,`uint32_t` count,`void*` buffer) -> `uint32_t` transaction_id</br>
 tied to `transact`

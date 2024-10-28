@@ -21,6 +21,9 @@ The kernel loading it then takes the struct for the metalanguage, and initialize
 * `core`->`unregister_device`(`int` device_id)
 
 ## Memory API
-* `core`->`alloc`(`int` size) -> `void*` ptr
+* `core`->`alloc`(`size_t` size) -> `void*` ptr
 * `core`->`free`(`void*` ptr) -> `bool` success
-* `core`->`realloc`(`void*` ptr,`int` size) -> `void*` new_ptr
+* `core`->`realloc`(`void*` ptr,`size_t` size) -> `void*` new_ptr
+
+* `core`->`memcpy`(`void*` dst,`const void*` src,`size_t` size) -> `bool` success
+* `core`->`memset`(`void*` ptr,`int` value,`size_t` size) -> `bool` success

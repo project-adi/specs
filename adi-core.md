@@ -15,6 +15,7 @@ The kernel loading it then takes the struct for the metalanguage, and initialize
 * `core`->`log_warning`(`char*` format,...)
 * `core`->`log_error`(`char*` format,...)
 * `core`->`panic`(`char*` format,...)
+* `core`->`exit`(`bool` success)
 
 ## Device API
 * `core`->`register_device`(metalanguage_t* metalangs_implemented,`int` count) -> `int` device_id

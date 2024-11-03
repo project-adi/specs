@@ -29,7 +29,7 @@ typedef struct {
 typedef struct {
     screen_t* screens;
     uint32_t num_screens;
-}
+} screen_list_t;
 ```
 ## Defines
 * `COLOR_CONFIG_RGB565` = 0
@@ -39,14 +39,14 @@ typedef struct {
 
 ## Driver side
 ### Events
-* `event_get_screens`(modeinfo_t mode) -> `screen_list_t` screens</br>
+* `event_get_screens`() -> `screen_list_t` screens</br>
 tied to `get_screens` 
-* `event_set_mode`(uint32_t mode) -> `bool` success</br>
+* `event_set_mode`(uint32_t fb_id,uint32_t mode) -> `bool` success</br>
 tied to `set_mode`
 
 ## Client side
 ### Functions
-* `get_screens(modeinfo_t mode)` -> `screen_list_t` screens </br>
+* `get_screens()` -> `screen_list_t` screens </br>
 tied to `event_get_screens`
 * `set_mode(uint32_t mode)` -> `bool` success </br>
 tied to `event_set_mode`

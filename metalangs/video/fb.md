@@ -1,5 +1,5 @@
 # ADI framebuffer metalanguage
-    ## Basic info
+## Basic info
 ID: 0x40030001
 stringified name: video_fb
 

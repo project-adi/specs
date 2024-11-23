@@ -20,7 +20,6 @@ other fields in the header:
 * Segment table offset(`4` bytes): offset of the segment table in the file
 * Segment table size(`4` bytes): size of the segment table
 * Content region offset(`4` bytes): offset of the content region
-* CFR address(`8` bytes): address to load the CFR pointer to
 
 ### String table
 The string table just has strings lul.
@@ -46,4 +45,3 @@ One entry contains:
 ### Metalanguage table
 One entry contains:
 * ID(`4` bytes): ID of the metalanguage
-* ptr_addr(`4` bytes): memory adress to put the pointer to the metalanguage struct at

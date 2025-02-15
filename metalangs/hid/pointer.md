@@ -1,6 +1,6 @@
 # The ADI Pointer metalanguage
 ## Basic info
-ID: `0x40010001`
+ID: `0x80010001`
 stringified name: `hid_pointer`
 
 ## Driver side

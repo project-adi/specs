@@ -1,6 +1,6 @@
 # The ADI Storage metalanguage
 ## Basic info
-ID: `0x400F0000`
+ID: `0x800F0000`
 stringified name: `misc_storage`
 
 

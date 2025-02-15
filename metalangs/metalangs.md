@@ -1,14 +1,14 @@
 # Metalanguage IDs
 a metalanguage ID is a 32 bit number unique to each metalanguage. While it can be anything, it should be interpreted as 16 bits of grup ID and 16 bits of metalanguage ID.
 
-# Metalnaguage orientation
+# Metalnaguage types
 a metalanguage can be:
- - Hardware-facing(`0x0000xxxx`,<a href="hw_facing_template.md">template</a>)
- - Client-facing(`0x4000xxxx`,<a href="client_facing_template.md">template</a>)
- - Loopback(`0x8000xxxx`,<a href="loopback_template.md">template</a>)
+ - Usable(`0x0000xxxx`) 
+ - Implementable(`0xF000xxxx`)
+ - Custom(`0xF000xxxx`)
 
 
-# Hardware facing metalnaguages
+# Usable metalanguages 
 * Architecture dependent(`0x0000xxxx`)
     These metalanguages let the driver use architecture dependant instructions easily:
     <!-- - <a href="arch_specific/x86.md">x86</a> -->
@@ -23,11 +23,11 @@ a metalanguage can be:
     <!-- - <a href="bus/usb.md">USB</a>
     - <a href="bus/scsi.md">SCSI</a> -->
 
-# Client-facing metalanguages
+# Implementable metalanguages 
 These metalanguages let the driver provide their functionality:
-<!-- * Network(`0x4000xxxx`)
+<!-- * Network(`0xF000xxxx`)
     - I have no fucking clue to put here -->
-* HID(`0x4001xxxx`)
+* HID(`0xF001xxxx`)
     - <a href="hid/kb.md">Keyboard</a>
     - <a href="hid/pointer.md">Pointing device</a>
     <!-- - <a href="hid/controller.md">Game controller</a>
@@ -39,14 +39,15 @@ These metalanguages let the driver provide their functionality:
 <!--* Audio(`0x0002xxxx`)
     - <a href="audio/out.md">Output</a>
     - <a href="audio/in.md">Input</a>-->
-* Video(`0x4003xxxx`)
+* Video(`0xF003xxxx`)
     - <a href="video/screenmgmt.md">Screen Management</a>
     - <a href="video/fb.md">Framebuffer</a>
     <!-- - <a href="video/opengl.md">OpenGL</a>
     - <a href="video/vulkan.md">Vulkan</a> -->
-* Misc(`0x400Fxxxx`)
+* Misc(`0xF00Fxxxx`)
     - <a href="misc/storage.md">Storage</a>
     - <a href="misc/timekeeper.md">Timekeeper</a>
 
-<!--## Custom metalanguages(`0xFFxxxxxx`)
-TODO: add a way for users to define custom metalanguages -->
+# Custom metalanguages
+* <a href="template.md">Template</a>
+custom metalanguages can be registered by a driver. They  

@@ -1,6 +1,6 @@
 # ADI framebuffer metalanguage
 ## Basic info
-ID: `0x40030001`
+ID: `0x80030001`
 stringified name: `video_fb`
 
 ## Structs

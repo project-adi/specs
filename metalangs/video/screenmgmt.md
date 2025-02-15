@@ -1,6 +1,6 @@
 # The ADI Screen Management metalanguage
 ## Basic info
-ID: `0x40030000`
+ID: `0x80030000`
 stringified name: `video_screenmgmt`
 
 ## Structs

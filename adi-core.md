@@ -2,31 +2,35 @@
 This document details the core API and ABI of the ADI protocol.
 
 ## Function loading
-All drivers get a pointer to the Core Function Region(CFR) as an argument called `core`.
+All drivers get a pointer to the core struct as an argument called `core`.
 
-# The Core struct
-## Metalanguages
-* `core`->`arch_x86_64`
-* `core`->`bus_pci`
-* `core`->`hid_kb`
-* `core`->`hid_pointer`
-* `core`->`video_screenmgmt`
-* `core`->`video_fb`
-* `core`->`misc_storage`
-* `core`->`misc_timekeeper`
+## The Metalanguage struct
+The metalanguage struct contains the following fields:
+* `int` id
+* `char*` stringified_name
+* `char*` implementer_name
+* `uint8_t` mlang_version_major
+* `uint8_t` mlang_version_minor
+* `uint16_t` mlang_version_build
 
-## Logging
+
+## The Core struct
+### Logging
 * `core`->`log_info`(`char*` format,...)
 * `core`->`log_warning`(`char*` format,...)
 * `core`->`log_error`(`char*` format,...)
 * `core`->`panic`(`char*` format,...)
 * `core`->`exit`(`bool` success)
 
-## Device API
+### Metalanguage API
+* `core`->`get_metalanguage`(`char*` name) -> `metalanguage*` metalangs_implemented
+* `core`->`implement_metalanguage`(`metalanguage*` metalang) -> `fptr` init_function
+
+### Device API
 * `core`->`register_device`(metalanguage_t* metalangs_implemented,`int` count) -> `int` device_id
 * `core`->`unregister_device`(`int` device_id)
 
-## Memory API
+### Memory API
 * `core`->`alloc`(`size_t` size) -> `void*` ptr
 * `core`->`free`(`void*` ptr) -> `bool` success
 * `core`->`realloc`(`void*` ptr,`size_t` size) -> `void*` new_ptr

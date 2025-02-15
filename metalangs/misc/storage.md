@@ -1,7 +1,8 @@
 # The ADI Storage metalanguage
 ## Basic info
-ID: 0x400F0000
-stringified name: misc_storage
+ID: `0x400F0000`
+stringified name: `misc_storage`
+
 
 ## Structs
 * sdev_ident_t
@@ -10,7 +11,7 @@ typedef struct {
     uint64_t size;
     uint64_t sector_size;
     bool read_only;
-    //TODO: CD burning support
+    //TODO: CD burning support, etc
 } sdev_ident_t;
 ```
 

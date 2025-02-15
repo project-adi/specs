@@ -1,7 +1,7 @@
 # The ADI Timekeeper metalanguage
 ## Basic info
-ID: 0x400F0001
-stringified name: misc_timekeeper
+ID: `0x400F0001`
+stringified name: `misc_timekeeper`
 
 ## Structs
 * time_t

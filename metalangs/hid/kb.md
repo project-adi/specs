@@ -1,7 +1,7 @@
 # The ADI Keyboard metalanguage
 ## Basic info
-ID: 0x40010000
-stringified name: hid_keyboard
+ID: `0x40010000`
+stringified name: `hid_keyboard`
 
 ## Driver side
 ### Events
